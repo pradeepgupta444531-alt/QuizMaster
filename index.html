@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QuizMaster - Test Your Knowledge</title>
+    <title>QuizMaster</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,22 +12,29 @@
 <body>
 
     <header class="navbar">
+
         <div class="logo">🎯 QuizMaster</div>
 
         <nav>
-            <a href="#">Home</a>
+            <a href="#" onclick="showHome()">Home</a>
             <a href="#">Quizzes</a>
             <a href="#">About</a>
         </nav>
+
     </header>
 
 
-    <main>
+    <!-- HOME PAGE -->
+
+    <main id="home-page">
 
         <section class="hero">
 
             <div class="hero-text">
-                <p class="small-title">WELCOME TO QUIZMASTER</p>
+
+                <p class="small-title">
+                    WELCOME TO QUIZMASTER
+                </p>
 
                 <h1>
                     Test Your Knowledge.<br>
@@ -42,6 +49,7 @@
                 <button class="start-btn" onclick="startQuiz()">
                     🚀 Start Quiz
                 </button>
+
             </div>
 
 
@@ -56,6 +64,7 @@
                 </p>
 
                 <div class="stats">
+
                     <div>
                         <strong>100+</strong>
                         <small>Questions</small>
@@ -70,6 +79,7 @@
                         <strong>∞</strong>
                         <small>Fun</small>
                     </div>
+
                 </div>
 
             </div>
@@ -89,42 +99,70 @@
             <div class="category-container">
 
                 <div class="category-card civil">
+
                     <div class="category-icon">🏗️</div>
+
                     <h3>Civil Engineering</h3>
-                    <p>Test your engineering knowledge.</p>
-                    <button onclick="selectCategory('Civil Engineering')">
+
+                    <p>
+                        Test your engineering knowledge.
+                    </p>
+
+                    <button onclick="startQuiz()">
                         Start Quiz
                     </button>
+
                 </div>
 
 
                 <div class="category-card math">
+
                     <div class="category-icon">🔢</div>
+
                     <h3>Mathematics</h3>
-                    <p>Challenge your mathematical skills.</p>
-                    <button onclick="selectCategory('Mathematics')">
-                        Start Quiz
+
+                    <p>
+                        Challenge your mathematical skills.
+                    </p>
+
+                    <button onclick="comingSoon()">
+                        Coming Soon
                     </button>
+
                 </div>
 
 
                 <div class="category-card gk">
+
                     <div class="category-icon">🌎</div>
+
                     <h3>General Knowledge</h3>
-                    <p>How much do you know about the world?</p>
-                    <button onclick="selectCategory('General Knowledge')">
-                        Start Quiz
+
+                    <p>
+                        How much do you know about the world?
+                    </p>
+
+                    <button onclick="comingSoon()">
+                        Coming Soon
                     </button>
+
                 </div>
 
 
                 <div class="category-card computer">
+
                     <div class="category-icon">💻</div>
+
                     <h3>Computer</h3>
-                    <p>Test your computer knowledge.</p>
-                    <button onclick="selectCategory('Computer')">
-                        Start Quiz
+
+                    <p>
+                        Test your computer knowledge.
+                    </p>
+
+                    <button onclick="comingSoon()">
+                        Coming Soon
                     </button>
+
                 </div>
 
             </div>
@@ -134,8 +172,106 @@
     </main>
 
 
+
+    <!-- QUIZ PAGE -->
+
+    <main id="quiz-page" class="quiz-page">
+
+        <div class="quiz-container">
+
+            <div class="quiz-top">
+
+                <span id="question-number">
+                    Question 1 of 10
+                </span>
+
+                <span id="timer">
+                    ⏱️ 30
+                </span>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div id="progress-bar"></div>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <h2 id="question">
+                    Question goes here
+                </h2>
+
+
+                <div id="answers">
+
+                    <!-- Answers will be created by JavaScript -->
+
+                </div>
+
+
+                <button id="next-btn" onclick="nextQuestion()">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- RESULT PAGE -->
+
+    <main id="result-page" class="result-page">
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <h1>Quiz Completed!</h1>
+
+            <p>Your final score is</p>
+
+            <div class="score">
+
+                <span id="final-score">
+                    0
+                </span>
+
+                / 10
+
+            </div>
+
+            <p id="result-message">
+                Great job!
+            </p>
+
+            <button class="start-btn" onclick="restartQuiz()">
+                🔄 Try Again
+            </button>
+
+            <button class="home-btn" onclick="showHome()">
+                🏠 Back to Home
+            </button>
+
+        </div>
+
+    </main>
+
+
     <footer>
-        <p>© 2026 QuizMaster | Learn • Play • Challenge</p>
+
+        <p>
+            © 2026 QuizMaster | Learn • Play • Challenge
+        </p>
+
     </footer>
 
 
