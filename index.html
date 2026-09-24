@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster - Test Your Knowledge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">🎯 QuizMaster</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Quizzes</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+                <p class="small-title">WELCOME TO QUIZMASTER</p>
+
+                <h1>
+                    Test Your Knowledge.<br>
+                    <span>Have Fun!</span>
+                </h1>
+
+                <p class="description">
+                    Challenge yourself with exciting quizzes,
+                    improve your knowledge and see how much you know.
+                </p>
+
+                <button class="start-btn" onclick="startQuiz()">
+                    🚀 Start Quiz
+                </button>
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="trophy">🏆</div>
+
+                <h2>Ready for the Challenge?</h2>
+
+                <p>
+                    Choose a category and start testing your knowledge.
+                </p>
+
+                <div class="stats">
+                    <div>
+                        <strong>100+</strong>
+                        <small>Questions</small>
+                    </div>
+
+                    <div>
+                        <strong>10+</strong>
+                        <small>Quizzes</small>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <small>Fun</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="categories">
+
+            <h2>Choose Your Category</h2>
+
+            <p class="category-subtitle">
+                Pick a topic and challenge yourself!
+            </p>
+
+
+            <div class="category-container">
+
+                <div class="category-card civil">
+                    <div class="category-icon">🏗️</div>
+                    <h3>Civil Engineering</h3>
+                    <p>Test your engineering knowledge.</p>
+                    <button onclick="selectCategory('Civil Engineering')">
+                        Start Quiz
+                    </button>
+                </div>
+
+
+                <div class="category-card math">
+                    <div class="category-icon">🔢</div>
+                    <h3>Mathematics</h3>
+                    <p>Challenge your mathematical skills.</p>
+                    <button onclick="selectCategory('Mathematics')">
+                        Start Quiz
+                    </button>
+                </div>
+
+
+                <div class="category-card gk">
+                    <div class="category-icon">🌎</div>
+                    <h3>General Knowledge</h3>
+                    <p>How much do you know about the world?</p>
+                    <button onclick="selectCategory('General Knowledge')">
+                        Start Quiz
+                    </button>
+                </div>
+
+
+                <div class="category-card computer">
+                    <div class="category-icon">💻</div>
+                    <h3>Computer</h3>
+                    <p>Test your computer knowledge.</p>
+                    <button onclick="selectCategory('Computer')">
+                        Start Quiz
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 QuizMaster | Learn • Play • Challenge</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
